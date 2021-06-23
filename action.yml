@@ -1,7 +1,7 @@
 name: 'guestfish'
 description: 'Execute a guestfish script'
 inputs:
-  fish_script:  # id of input
+  guestfish_script:  # id of input
     description: 'guestfish script contents'
     required: true
 runs:
