@@ -4,11 +4,9 @@ inputs:
   fish_script:  # id of input
     description: 'guestfish script contents'
     required: true
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: ''
+  image: 'ghcr.io/xcape-inc/docker-guestfs:master'
+  entrypoint: /usr/local/bin/guestfish_use_script.sh
   args:
-    - ${{ inputs.fish_script}}
+    - ${{ inputs.fish_script }}
