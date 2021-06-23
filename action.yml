@@ -1,0 +1,14 @@
+name: 'guestfish'
+description: 'Execute a guestfish script'
+inputs:
+  fish_script:  # id of input
+    description: 'guestfish script contents'
+    required: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: ''
+  args:
+    - ${{ inputs.fish_script}}
