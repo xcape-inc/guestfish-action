@@ -9,4 +9,4 @@ runs:
   image: 'ghcr.io/xcape-inc/docker-guestfs:master'
   entrypoint: /usr/local/bin/guestfish_use_script.sh
   args:
-    - ${{ inputs.fish_script }}
+    - ${{ inputs.guestfish_script }}
